@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header__top">
+                <a class="header__logo-link" href="#">
+                    <img class="header__logo-svg" src="img/DSK_logo.svg" alt="Logo">
+                </a>
+                <form class="header__form">
+                    <input class="header__input" type="text" placeholder="Поиск по каталогу">
+                </form>
+                <div class="header__burger-menu">
+                    <span></span>
+                </div>
+            </div>
+            <div class="header__bot">
+                <nav class="header__nav">
+                    <ul class="header__nav-list list_reset">
+                        <li class="header__nav-list-item"><a class="header__nav-link" href="#">Главная</a></li>
+                        <li class="header__nav-list-item"><a class="header__nav-link" href="#">Каталог товаров</a></li>
+                        <li class="header__nav-list-item"><a class="header__nav-link" href="#">Частное домостроение</a></li>
+                        <li class="header__nav-list-item"><a class="header__nav-link" href="#">Плиты перекрытия</a></li>
+                        <li class="header__nav-list-item"><a class="header__nav-link" href="#">Плиты ПК</a></li>
+                        <li class="header__nav-list-item"><a class="header__nav-link" href="#">Пк 63-12-8</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main class="main">
+            <section class="section-card">
+                <h2 class="card__title-card">ПК 63-12-8</h2>
+                <div class="card__stars">
+                    <img src="img/Vector.png" alt="">
+                    <img src="img/Vector.png" alt="">
+                    <img src="img/Vector.png" alt="">
+                    <img src="img/Vector1.png" alt="">
+                    <img src="img/Vector2.png" alt="">
+                </div>
+                <div id="menuwrap">
+                    <div id="menu">
+                        <div id="items">
+                            <button id="defaultOpen" class=" tablinks btn_reset card__btn-tab" onclick="openTab(event, '1')">Все&nbsp;о&nbsp;товаре</button>
+                            <button class=" tablinks btn_reset card__btn-tab" onclick="openTab(event, '2')">Характеристики</button>
+                            <button class=" tablinks btn_reset card__btn-tab" onclick="openTab(event, '3')">Обзор</button>
+                            <button class=" tablinks btn_reset card__btn-tab" onclick="openTab(event, '4')">Обзор</button>
+                            <button class=" tablinks btn_reset card__btn-tab" onclick="openTab(event, '5')">Обзор</button>
+                        </div>
+                    </div>
+                  </div>
+                <div id="1" class="tabcontent">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <img class="card__img-slide" src="img/img.png" alt="img">
+                          </div>
+                          <div class="swiper-slide">
+                            <img class="card__img-slide" src="img/img.png" alt="img">
+                          </div>
+                          <div class="swiper-slide">
+                            <img class="card__img-slide" src="img/img.png" alt="img">
+                          </div>
+                          <div class="swiper-slide">
+                            <img class="card__img-slide" src="img/img.png" alt="img">
+                          </div>
+                          <div class="swiper-slide">
+                            <img class="card__img-slide" src="img/img.png" alt="img">
+                          </div>
+                          <div class="swiper-slide">
+                            <img class="card__img-slide" src="img/img.png" alt="img">
+                          </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <div class="card__about">
+                        <h3 class="card__about-title">Характеристики</h3>
+                        <p class="card__about-descr">Наименование:<span>Плиты ПК</span></p>
+                        <p class="card__about-descr">Завод-производитель:<span>Москва и МО</span></p>
+                        <p class="card__about-descr">Технические условия:<span>ГОСТ 9561-91</span></p>
+                        <p class="card__about-descr">Длина, мм:<span>6300</span></p>
+                        <p class="card__about-descr">Ширина, мм:<span>220</span></p>
+                        <p class="card__about-descr">Расчетная нагрузка, кг/м²:<span>800</span></p>
+                        <p class="card__about-descr">Вес 1 шт, т:<span>1,755</span></p>
+                    </div>
+                    <div class="card__buy">
+                        <p class="card__quantity">484,00 р/шт</p>
+                        <p class="card__quantity2">154,88 p/м²</p>
+                        <p class="card__number"><span>Артикул:</span> 0543680</p>
+                        <ul class="card__option list_reset">
+                            <li class="card__option-item">
+                                <form id="buy" class="number">
+                                    <button id="number-minus" type="button" onclick="this.nextElementSibling.stepDown();">-</button>
+                                    <input type="number" min="0" value="1" readonly>
+                                    <button id="number-plus" type="button" onclick="this.previousElementSibling.stepUp();">+</button>
+                                </form>
+                            </li>
+                            <li class="card__option-item"><button class="card__btn-form btn_reset" form="buy">В корзину</button></li>
+                            <li class="card__option-item"><button class="btn__favorites btn_reset">В избранное</button></li>
+                            <li class="card__option-item"><a class="card__call-link" href="tel:79999999999">Позвонить</a></li>
+                        </ul>
+                        <div class="card__buy-descr">
+                            <p class="card__social-descr">Также для вашего удобства мы доступны в мессенджера</p>
+                            <ul class="card__social-list list_reset">
+                                <li class="card__social-list-item">
+                                    <a href="#">
+                                        <img src="img//WhatsApp.png" alt="Wtsp">
+                                    </a>
+                                </li>
+                                <li class="card__social-list-item">
+                                    <a href="#">
+                                        <img src="img/Viber.png" alt="Viber">
+                                    </a>
+                                </li>
+                                <li class="card__social-list-item">
+                                    <a href="#">
+                                        <img src="img/Telegram.png" alt="Telegram">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                  
+                <div id="2" class="tabcontent">
+                    <h3>Paris</h3>
+                    <p>Paris is the capital of France.</p>
+                </div>
+                  
+                <div id="3" class="tabcontent">
+                    <h3>Tokyo</h3>
+                    <p>Tokyo is the capital of Japan.</p>
+                </div>
+                  
+            </section>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="js/tabs.js"></script>
+</body>
+</html>
