@@ -30,6 +30,27 @@ p{
     margin-bottom: 10px;
 }
 
+@keyframes anim-ramka-6 {
+    0% {
+        background-size:    0 2px, 2px 0, 0 2px, 2px 0;
+    }
+    100% {
+        background-size:    100% 2px, 2px 100%, 100% 2px, 2px 100%;
+    }
+}
+
+@keyframes shaking-animation {
+    0%, 50%, 100%{
+        transform: rotate(0deg);
+    }
+    10%, 30%{
+        transform: rotate(-5deg);
+    }
+    20%,40%{
+        transform: rotate(5deg);
+    }
+}
+
 
 /* header */
 .header__top{
@@ -42,17 +63,68 @@ p{
 }
 
 .header__form{
+    position: relative;
     margin-right: auto;
+}
+
+.header__input-img{
+    position: absolute;
+    width: 10%;
+    right: 5px;
+    top: 7px;
+    transition: width .3s ease
 }
 
 .header__input{
     width: 220px;
-    background-image: url(../img/search.png);
-    background-repeat: no-repeat;
-    background-position: right;
-    padding: 9px 9px 9px 0;
+    padding: 10px;
     border: none;
     border-bottom: 1px solid #e6e6e6;
+    animation: 2s ease-in-out 0s normal none infinite running shaking-animation;
+}
+
+.header__input:hover {
+    background-repeat: no-repeat;
+    background-image:   linear-gradient(to right, #BFE2FF 100%, #BFE2FF 100%),
+        linear-gradient(to bottom, #BFE2FF 100%, #BFE2FF 100%),
+        linear-gradient(to right, #BFE2FF 100%, #BFE2FF 100%),
+        linear-gradient(to bottom, #BFE2FF 100%, #BFE2FF 100%);
+    background-size:    100% 2px, 2px 100%, 100% 2px, 2px 100%;
+    background-position:    0 0, 100% 0, 100% 100%, 0 100%;
+    animation: anim-ramka-6 1.25s cubic-bezier(0.19, 1, 0.22, 1) 1;
+}
+
+.header__form:hover .header__input-img{
+    width: 0;
+    transition: width .3s ease;
+}
+
+.header__input:focus {
+    background-repeat: no-repeat;
+    background-image:   linear-gradient(to right, #BFE2FF 100%, #BFE2FF 100%),
+        linear-gradient(to bottom, #BFE2FF 100%, #BFE2FF 100%),
+        linear-gradient(to right, #BFE2FF 100%, #BFE2FF 100%),
+        linear-gradient(to bottom, #BFE2FF 100%, #BFE2FF 100%);
+    background-size:    100% 2px, 2px 100%, 100% 2px, 2px 100%;
+    background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+    animation: paused;
+}
+
+.header__input::placeholder{
+    transition: font-size .3s ease;
+}
+
+.header__input:hover::placeholder{
+    font-size: 0px;
+    transition: font-size .3s ease;
+}
+
+.header__input:focus::placeholder{
+    font-size: 0;
+}
+
+.header__input:focus{
+    outline: none;
 }
 
 .header__burger-menu{
